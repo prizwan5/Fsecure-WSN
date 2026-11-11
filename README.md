@@ -1,4 +1,4 @@
-# FSecure-WSN: independently authored reconstruction (NOT original experiment artifacts)
+# FSecure-WSN: independently authored reconstruction
 
 This package is a reproducible implementation **starting point** consistent with much of the paper's specified mathematical framework. It does not retrieve, authenticate, or recreate the historical code and measurements behind the paper. In particular, the native NS-3 source exports real ns-3 node geometry and instantiates LR-WPAN devices, while the Python forwarding simulation is an explicitly designated **analytical packet replay**, not native LR-WPAN PHY/MAC execution. EESM, Opportunistic and supervised-network baselines are **proxies**, not faithful replications of the cited publications. See `supplement/RECONSTRUCTION_PROTOCOL.md`.
 
