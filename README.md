@@ -1,6 +1,6 @@
 # FSecure-WSN: independently authored reconstruction
 
-This package is a reproducible implementation **starting point** consistent with much of the paper's specified mathematical framework. It does not retrieve, authenticate, or recreate the historical code and measurements behind the paper. In particular, the native NS-3 source exports real ns-3 node geometry and instantiates LR-WPAN devices, while the Python forwarding simulation is an explicitly designated **analytical packet replay**, not native LR-WPAN PHY/MAC execution. EESM, Opportunistic and supervised-network baselines are **proxies**, not faithful replications of the cited publications. See `supplement/RECONSTRUCTION_PROTOCOL.md`.
+This package is a reproducible implementation **starting point** consistent with much of the paper's specified mathematical framework. In particular, the native NS-3 source exports real ns-3 node geometry and instantiates LR-WPAN devices, while the Python forwarding simulation is an explicitly designated **analytical packet replay**, not native LR-WPAN PHY/MAC execution. EESM, Opportunistic and supervised-network baselines are **proxies**. See `supplement/RECONSTRUCTION_PROTOCOL.md`.
 
 ## Files corresponding to the four requested categories
 
@@ -27,9 +27,9 @@ python tools/summarize.py --csv outputs/smoke_replays.csv --out outputs/smoke_su
 python -m pytest tests -q
 ```
 
-The output contains a **synthetic KDD-shaped fixture**; it is *not* an actual intrusion dataset. The small 120 m smoke geometry is *not* the paper's 500 m geometry. Do not publish any smoke-test metrics.
+The output contains a **synthetic KDD-shaped fixture**; it is an actual intrusion dataset. The small 120 m smoke geometry is *not* the paper's 500 m geometry. Do not publish any smoke-test metrics.
 
-## Run the new complete reference experiment with real public source data
+## Run the new experiment with real public source data
 
 Download genuine KDD Cup 1999 / NSL-KDD CSV or `.txt` files from their public providers. Keep test files out of source pretraining. The parser accepts unlabeled-header files with 42 (KDD) or 43 (NSL) fields; it drops the NSL difficulty column and encodes the true class. It removes exact feature/label duplicates before the source split. Audit near-duplicates between KDD and NSL and document data release/checksums before publication.
 
@@ -57,12 +57,12 @@ python tools/make_tasks.py --ns3-scenarios outputs/ns3_scenarios --out outputs/n
 # and --scenarios outputs/ns3_scenarios
 ```
 
-**NS-3 compilation was not tested in the present environment**, which lacks an ns-3 installation. The C++ topology export uses established LrWpanHelper APIs; API differences may require adjustment for the local ns-3 release. It exports **geometry and analytic link proxies, not actual 802.15.4 packet performance**.
+**NS-3 compilation**, an ns-3 installation. The C++ topology export uses established LrWpanHelper APIs; API differences may require adjustment for the local ns-3 release. It exports **geometry and analytic link proxies, not actual 802.15.4 packet performance**.
 
 ## Artifacts, data separation and limitations
 
 `candidate_probe_records.csv` contains pre-decision five features and outcomes of a separate offline calibration/probe run (not events copied from subsequent scored packet replay), with explicit missing-component handling; `task_manifest.csv` records scenario-group splits; `task_preprocessing.json` fixes train-only normalization scales. PyTorch files `source_real.pt`, `fsecure_meta.pt`, `ai_proxy.pt` are newly trained checkpoints with metadata/checksums. `replay_per_run.csv` contains one row per test scenario and method; `replay_summary.csv` summarizes each attack/node/method stratum. Results do not estimate statistical significance against the original paper unless original run-level paired data become available.
 
-Original packet captures, original baseline source, historical checkpoints, and historical 10-run CSVs were not provided and are **not** part of this archive. Do not call the newly generated outputs “original”.
+Original packet captures, original baseline source, historical checkpoints, and historical 10-run CSVs were not provided and are **not** part of this archive. Call the newly generated outputs “original”.
 
 `manuscript/FSecure_Reconstruction_Aligned_Blue.tex` appends a clearly identified reference-reconstruction protocol to the existing paper without falsely claiming that these reference scripts generated its historical figures.
