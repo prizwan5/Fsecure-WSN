@@ -1,0 +1,15 @@
+episode=1 query_mse=0.058854
+episode=2 query_mse=0.047077
+episode=3 query_mse=0.039575
+episode=100 query_mse=0.035055
+episode=200 query_mse=0.032421
+episode=300 query_mse=0.033327
+episode=400 query_mse=0.028036
+episode=500 query_mse=0.031882
+episode=600 query_mse=0.033965
+episode=700 query_mse=0.028486
+episode=800 query_mse=0.031229
+episode=900 query_mse=0.025932
+episode=1000 query_mse=0.033721
+saved outputs/EXECUTED_FSECURE.pt
+maml elapsed 16.56 sec

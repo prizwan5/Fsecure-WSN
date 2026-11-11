@@ -1,0 +1,8 @@
+{
+  "backend": "python_reference_surrogate",
+  "not_real_ns3_phy": true,
+  "seed": 5,
+  "nodes": 100,
+  "attack": "blackhole",
+  "config_sha256": "60c0a1455035f781fe5451611fe48fd3cc1cfeda6acee48e89f23c79ae4ff41e"
+}

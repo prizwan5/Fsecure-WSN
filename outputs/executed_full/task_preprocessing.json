@@ -1,0 +1,49 @@
+{
+  "provenance": "NEW surrogate probe outcomes, NOT historical paper measurements",
+  "energy_reference_j_train_only": 0.0002686725494777947,
+  "delay_reference_ms_train_only": 3.807149161978638,
+  "feature_names": [
+    "energy_input",
+    "trust_input",
+    "link_input",
+    "pdr_input",
+    "delay_input"
+  ],
+  "label_weights": {
+    "energy": 0.3,
+    "trust": 0.3,
+    "link": 0.25,
+    "delay": 0.15
+  },
+  "missing_component_policy": "renormalize weights across observed costs",
+  "adaptation_support_provenance": "independent offline calibration probes, not packet events from the later scored replay",
+  "splits": "disjoint scenario IDs and seed groups; no row-level mixing",
+  "training_seed_ids": [
+    101,
+    102,
+    103,
+    104,
+    105,
+    106
+  ],
+  "validation_seed_ids": [
+    107,
+    108
+  ],
+  "test_seed_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "simulator_backend": "python_reference_surrogate",
+  "smoke_geometry_override": null,
+  "records": 48600,
+  "num_tasks": 162
+}

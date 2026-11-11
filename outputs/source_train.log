@@ -1,0 +1,6 @@
+{
+  "checkpoint": "outputs/EXECUTED_SYNTHETIC_SOURCE.pt",
+  "source_input_dim": 44,
+  "source_validation_bce": 0.5732607245445251,
+  "row_count": 300
+}

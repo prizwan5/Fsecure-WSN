@@ -1,0 +1,53 @@
+{
+  "common_new_config": {
+    "area_m": 500.0,
+    "sink_x_m": 250.0,
+    "sink_y_m": 525.0,
+    "radio_range_m": 50.0,
+    "packet_bytes_application": 512,
+    "frame_payload_bytes_surrogate": 96,
+    "attack_fraction": 0.15,
+    "attack_activation_round": 10,
+    "rounds": 1000,
+    "training_seeds": [
+      101,
+      102,
+      103,
+      104,
+      105,
+      106
+    ],
+    "validation_seeds": [
+      107,
+      108
+    ],
+    "evaluation_seeds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  "reference_comparator_proxies": {
+    "eesm_proxy": {
+      "max_disjoint_routes": 2,
+      "trust_floor": 0.6,
+      "recompute_paths_per_application_packet": true
+    },
+    "opportunistic_proxy": {
+      "candidate_set_size": 3,
+      "coordination_delay_ms": 2.0
+    },
+    "supervised_mlp_proxy": {
+      "hidden_neurons": 32,
+      "train_epochs": 50
+    }
+  },
+  "WARNING": "Not executed historical EESM, Opportunistic, or AI-CPS settings"
+}

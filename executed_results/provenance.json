@@ -1,0 +1,40 @@
+{
+  "result_category": "NEW 60-round analytical packet replay, not native NS-3, not original study",
+  "source_dataset": "300-row SYNTHETIC KDD-shaped fixture, not real KDD Cup 99 or NSL-KDD",
+  "node_counts": [
+    100,
+    150,
+    200
+  ],
+  "attacks": [
+    "blackhole",
+    "selective",
+    "sybil_proxy"
+  ],
+  "evaluation_seeds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "rounds_per_scenario": 60,
+  "packets_per_round": 2,
+  "rows": 360,
+  "checkpoint_transfer": "source fc2.weight (32x64) and fc2.bias (32) copied; test checkpoint synthetic source",
+  "model_training": "1000 second-order MAML episodes; five adaptation steps; outer Adam; meta batch 4",
+  "baseline_validity": "three independently developed proxies, not published baseline implementations",
+  "radio_backend": "Python analytical probability and energy replay, not native NS-3 MAC or PHY",
+  "files_sha256": {
+    "config/experiment.json": "f3ae96e68f513b9ef29c33f156a246a57ab02723b7e7bf0e11d187c287c4e2c4",
+    "outputs/EXECUTED_SYNTHETIC_SOURCE.pt": "7e9002e0e224aab2d17ee3ba0bb3b542c5f326e4f7f89a3ca70f226ce1ca71ba",
+    "outputs/EXECUTED_FSECURE.pt": "24126d82d8d0dd16ba9b311733f151815f36c80d3fb09e5b8e95474e9cfe09bc",
+    "outputs/EXECUTED_SUPERVISED.pt": "9be8569aac010bd0774cef94596aac3468f7dd449fe6b11151138d5924d7e19b",
+    "outputs/executed_full/candidate_probe_records.csv": "31f8aa2e2e3827c0774a70305aae4bb13b5350d4b7720bf0c283a646d41019a6"
+  }
+}

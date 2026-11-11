@@ -1,0 +1,13 @@
+{
+  "episodes": 1000,
+  "final_meta_mse": 0.03372085839509964,
+  "second_order": true,
+  "adapted_parameters": "all",
+  "inner_optimizer": "functional_SGD",
+  "outer_optimizer": "Adam",
+  "source_checkpoint": "outputs/EXECUTED_SYNTHETIC_SOURCE.pt",
+  "transferred_parameter_names": [
+    "fc2.weight",
+    "fc2.bias"
+  ]
+}

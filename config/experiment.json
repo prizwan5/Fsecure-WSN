@@ -1,0 +1,102 @@
+{
+  "provenance": "NEW_REFERENCE_RECONSTRUCTION_NOT_ORIGINAL_2026_RESULTS",
+  "seed": 20261111,
+  "node_counts": [
+    100,
+    150,
+    200
+  ],
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "area_m": 500.0,
+  "sink_x_m": 250.0,
+  "sink_y_m": 525.0,
+  "radio_range_m": 50.0,
+  "initial_energy_j": 2.0,
+  "energy_threshold_j": 0.2,
+  "trust_threshold": 0.6,
+  "trust_forgetting_factor": 0.8,
+  "packet_bytes_application": 512,
+  "frame_payload_bytes_surrogate": 96,
+  "radio_e_elec_j_per_bit": 5e-08,
+  "radio_epsilon_j_per_bit_m2": 1e-10,
+  "radio_path_loss_exponent": 2.0,
+  "mac_max_retries_surrogate": 3,
+  "tx_power_dbm": 0.0,
+  "rx_threshold_dbm": -91.0,
+  "link_success_scale_db": 3.5,
+  "log_distance_reference_loss_db": 40.0,
+  "log_distance_exponent": 3.0,
+  "attack_fraction": 0.15,
+  "attack_activation_round": 10,
+  "selective_drop_probability": 0.5,
+  "sybil_proxy_drop_probability": 0.3,
+  "rounds": 1000,
+  "packets_per_round": 2,
+  "max_hops": 30,
+  "history_window_rounds": 20,
+  "candidate_probes_per_scenario": 300,
+  "task_support": 8,
+  "task_query": 16,
+  "tasks_per_meta_batch": 4,
+  "meta_episodes": 1000,
+  "inner_steps": 5,
+  "inner_lr": 0.01,
+  "outer_lr": 0.001,
+  "maml_second_order": true,
+  "source_epochs": 15,
+  "source_batch_size": 128,
+  "source_lr": 0.001,
+  "supervised_epochs": 50,
+  "supervised_batch_size": 64,
+  "supervised_lr": 0.001,
+  "baselines": {
+    "eesm_proxy": {
+      "max_disjoint_routes": 2,
+      "trust_floor": 0.6,
+      "recompute_paths_per_application_packet": true
+    },
+    "opportunistic_proxy": {
+      "candidate_set_size": 3,
+      "coordination_delay_ms": 2.0
+    },
+    "supervised_mlp_proxy": {
+      "hidden_neurons": 32,
+      "train_epochs": 50
+    }
+  },
+  "training_seeds": [
+    101,
+    102,
+    103,
+    104,
+    105,
+    106
+  ],
+  "validation_seeds": [
+    107,
+    108
+  ],
+  "evaluation_seeds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ]
+}
